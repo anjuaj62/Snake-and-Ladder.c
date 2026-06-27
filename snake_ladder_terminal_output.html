@@ -1,0 +1,221 @@
+<style>
+  .term {
+    background: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  .titlebar {
+    background: #323232;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .dot { width: 12px; height: 12px; border-radius: 50%; }
+  .title-text { color: #888; font-size: 12px; margin-left: auto; margin-right: auto; font-family: var(--font-sans); }
+  .body { padding: 16px 20px; color: #d4d4d4; }
+  .w  { color: #ffffff; }
+  .g  { color: #4ec9b0; }
+  .y  { color: #dcdcaa; }
+  .r  { color: #f48771; }
+  .b  { color: #9cdcfe; }
+  .p  { color: #c586c0; }
+  .dim { color: #666; }
+  .line { display: block; min-height: 1.6em; }
+  .prompt { color: #4ec9b0; }
+  .input-line { color: #ffffff; }
+  .sep { color: #555; }
+</style>
+
+<div class="term">
+  <div class="titlebar">
+    <div class="dot" style="background:#ff5f57"></div>
+    <div class="dot" style="background:#febc2e"></div>
+    <div class="dot" style="background:#28c840"></div>
+    <span class="title-text">Terminal — snake_ladder</span>
+  </div>
+  <div class="body">
+
+    <span class="line"><span class="prompt">$ </span><span class="w">gcc snake_ladder.c -o snake_ladder && ./snake_ladder</span></span>
+    <span class="line"></span>
+
+    <span class="line"><span class="y">===== Snake and Ladder Game =====</span></span>
+    <span class="line"></span>
+    <span class="line"><span class="w">Enter number of players (2 to 10): </span><span class="input-line">2</span></span>
+    <span class="line"></span>
+    <span class="line"><span class="dim">  Snakes  (slide DOWN): 17->7  | 54->34 | 62->19</span></span>
+    <span class="line"><span class="dim">  Ladders (climb UP)  :  3->22 | 25->45 | 56->78</span></span>
+    <span class="line"><span class="dim">  Roll a 1 to enter. Roll a 6 for an extra turn.</span></span>
+    <span class="line"></span>
+
+    <span class="line"><span class="sep">---------------------------------</span></span>
+    <span class="line"><span class="b">Player 1's turn</span><span class="dim">  (not on board yet)</span></span>
+    <span class="line"><span class="w">Press ENTER to roll...</span></span>
+    <span class="line"><span class="w">Dice = </span><span class="g">1</span></span>
+    <span class="line"><span class="g">  Player 1 entered the board at square 1!</span></span>
+    <span class="line"></span>
+
+    <span class="line"><span class="sep">---------------------------------</span></span>
+    <span class="line"><span class="b">Player 2's turn</span><span class="dim">  (not on board yet)</span></span>
+    <span class="line"><span class="w">Press ENTER to roll...</span></span>
+    <span class="line"><span class="w">Dice = </span><span class="y">4</span></span>
+    <span class="line"><span class="r">  Need a 1 to enter. Better luck next turn!</span></span>
+    <span class="line"></span>
+
+    <span class="line"><span class="sep">---------------------------------</span></span>
+    <span class="line"><span class="b">Player 1's turn</span><span class="dim">  (at square 1)</span></span>
+    <span class="line"><span class="w">Press ENTER to roll...</span></span>
+    <span class="line"><span class="w">Dice = </span><span class="y">2</span></span>
+    <span class="line"><span class="w">  Player 1 moved to square 3.</span></span>
+    <span class="line"><span class="g">  *** LADDER! Climb from 3 up to 22! ***</span></span>
+    <span class="line"></span>
+
+    <span class="line"><span class="sep">---------------------------------</span></span>
+    <span class="line"><span class="b">Player 2's turn</span><span class="dim">  (not on board yet)</span></span>
+    <span class="line"><span class="w">Press ENTER to roll...</span></span>
+    <span class="line"><span class="w">Dice = </span><span class="g">1</span></span>
+    <span class="line"><span class="g">  Player 2 entered the board at square 1!</span></span>
+    <span class="line"></span>
+
+    <span class="line"><span class="sep">---------------------------------</span></span>
+    <span class="line"><span class="b">Player 1's turn</span><span class="dim">  (at square 22)</span></span>
+    <span class="line"><span class="w">Press ENTER to roll...</span></span>
+    <span class="line"><span class="w">Dice = </span><span class="p">6</span></span>
+    <span class="line"><span class="w">  Player 1 moved to square 28.</span></span>
+    <span class="line"><span class="p">  Player 1 rolled a 6 — EXTRA TURN!</span></span>
+    <span class="line"><span class="w">  Press ENTER to roll again...</span></span>
+    <span class="line"><span class="w">  Dice = </span><span class="y">3</span></span>
+    <span class="line"><span class="w">  Player 1 moved to square 31.</span></span>
+    <span class="line"></span>
+
+    <span class="line"><span class="sep">---------------------------------</span></span>
+    <span class="line"><span class="b">Player 2's turn</span><span class="dim">  (at square 1)</span></span>
+    <span class="line"><span class="w">Press ENTER to roll...</span></span>
+    <span class="line"><span class="w">Dice = </span><span class="y">5</span></span>
+    <span class="line"><span class="w">  Player 2 moved to square 6.</span></span>
+    <span class="line"></span>
+
+    <span class="line"><span class="sep">---------------------------------</span></span>
+    <span class="line"><span class="b">Player 1's turn</span><span class="dim">  (at square 31)</span></span>
+    <span class="line"><span class="w">Press ENTER to roll...</span></span>
+    <span class="line"><span class="w">Dice = </span><span class="y">4</span></span>
+    <span class="line"><span class="w">  Player 1 moved to square 35.</span></span>
+    <span class="line"></span>
+
+    <span class="line"><span class="sep">---------------------------------</span></span>
+    <span class="line"><span class="b">Player 2's turn</span><span class="dim">  (at square 6)</span></span>
+    <span class="line"><span class="w">Press ENTER to roll...</span></span>
+    <span class="line"><span class="w">Dice = </span><span class="y">5</span></span>
+    <span class="line"><span class="w">  Player 2 moved to square 11.</span></span>
+    <span class="line"></span>
+
+    <span class="line"><span class="sep">---------------------------------</span></span>
+    <span class="line"><span class="b">Player 1's turn</span><span class="dim">  (at square 35)</span></span>
+    <span class="line"><span class="w">Press ENTER to roll...</span></span>
+    <span class="line"><span class="w">Dice = </span><span class="y">6</span></span>
+    <span class="line"><span class="w">  Player 1 moved to square 41.</span></span>
+    <span class="line"><span class="p">  Player 1 rolled a 6 — EXTRA TURN!</span></span>
+    <span class="line"><span class="w">  Press ENTER to roll again...</span></span>
+    <span class="line"><span class="w">  Dice = </span><span class="y">4</span></span>
+    <span class="line"><span class="w">  Player 1 moved to square 45.</span></span>
+    <span class="line"></span>
+
+    <span class="line"><span class="sep">---------------------------------</span></span>
+    <span class="line"><span class="b">Player 2's turn</span><span class="dim">  (at square 11)</span></span>
+    <span class="line"><span class="w">Press ENTER to roll...</span></span>
+    <span class="line"><span class="w">Dice = </span><span class="y">3</span></span>
+    <span class="line"><span class="w">  Player 2 moved to square 14.</span></span>
+    <span class="line"></span>
+
+    <span class="line"><span class="sep">---------------------------------</span></span>
+    <span class="line"><span class="b">Player 1's turn</span><span class="dim">  (at square 45)</span></span>
+    <span class="line"><span class="w">Press ENTER to roll...</span></span>
+    <span class="line"><span class="w">Dice = </span><span class="y">5</span></span>
+    <span class="line"><span class="w">  Player 1 moved to square 50.</span></span>
+    <span class="line"></span>
+
+    <span class="line"><span class="sep">---------------------------------</span></span>
+    <span class="line"><span class="b">Player 2's turn</span><span class="dim">  (at square 14)</span></span>
+    <span class="line"><span class="w">Press ENTER to roll...</span></span>
+    <span class="line"><span class="w">Dice = </span><span class="y">3</span></span>
+    <span class="line"><span class="w">  Player 2 moved to square 17.</span></span>
+    <span class="line"><span class="r">  ~~~ SNAKE! Slide from 17 down to 7! ~~~</span></span>
+    <span class="line"></span>
+
+    <span class="line"><span class="sep">---------------------------------</span></span>
+    <span class="line"><span class="b">Player 1's turn</span><span class="dim">  (at square 50)</span></span>
+    <span class="line"><span class="w">Press ENTER to roll...</span></span>
+    <span class="line"><span class="w">Dice = </span><span class="y">6</span></span>
+    <span class="line"><span class="w">  Player 1 moved to square 56.</span></span>
+    <span class="line"><span class="g">  *** LADDER! Climb from 56 up to 78! ***</span></span>
+    <span class="line"><span class="p">  Player 1 rolled a 6 — EXTRA TURN!</span></span>
+    <span class="line"><span class="w">  Press ENTER to roll again...</span></span>
+    <span class="line"><span class="w">  Dice = </span><span class="y">5</span></span>
+    <span class="line"><span class="w">  Player 1 moved to square 83.</span></span>
+    <span class="line"></span>
+
+    <span class="line"><span class="sep">---------------------------------</span></span>
+    <span class="line"><span class="b">Player 2's turn</span><span class="dim">  (at square 7)</span></span>
+    <span class="line"><span class="w">Press ENTER to roll...</span></span>
+    <span class="line"><span class="w">Dice = </span><span class="y">4</span></span>
+    <span class="line"><span class="w">  Player 2 moved to square 11.</span></span>
+    <span class="line"></span>
+
+    <span class="line"><span class="sep">---------------------------------</span></span>
+    <span class="line"><span class="b">Player 1's turn</span><span class="dim">  (at square 83)</span></span>
+    <span class="line"><span class="w">Press ENTER to roll...</span></span>
+    <span class="line"><span class="w">Dice = </span><span class="y">3</span></span>
+    <span class="line"><span class="w">  Player 1 moved to square 86.</span></span>
+    <span class="line"></span>
+
+    <span class="line"><span class="sep">---------------------------------</span></span>
+    <span class="line"><span class="b">Player 1's turn</span><span class="dim">  (at square 86)</span></span>
+    <span class="line"><span class="w">Press ENTER to roll...</span></span>
+    <span class="line"><span class="w">Dice = </span><span class="y">2</span></span>
+    <span class="line"><span class="w">  Player 1 moved to square 88.</span></span>
+    <span class="line"></span>
+
+    <span class="line"><span class="sep">---------------------------------</span></span>
+    <span class="line"><span class="b">Player 2's turn</span><span class="dim">  (at square 11)</span></span>
+    <span class="line"><span class="w">Press ENTER to roll...</span></span>
+    <span class="line"><span class="w">Dice = </span><span class="y">5</span></span>
+    <span class="line"><span class="w">  Player 2 moved to square 16.</span></span>
+    <span class="line"></span>
+
+    <span class="line"><span class="sep">---------------------------------</span></span>
+    <span class="line"><span class="b">Player 1's turn</span><span class="dim">  (at square 88)</span></span>
+    <span class="line"><span class="w">Press ENTER to roll...</span></span>
+    <span class="line"><span class="w">Dice = </span><span class="y">6</span></span>
+    <span class="line"><span class="w">  Player 1 moved to square 94.</span></span>
+    <span class="line"><span class="p">  Player 1 rolled a 6 — EXTRA TURN!</span></span>
+    <span class="line"><span class="w">  Press ENTER to roll again...</span></span>
+    <span class="line"><span class="w">  Dice = </span><span class="y">6</span></span>
+    <span class="line"><span class="w">  Needs exact roll to finish. Stays at 94.</span></span>
+    <span class="line"><span class="p">  Player 1 rolled a 6 — EXTRA TURN!</span></span>
+    <span class="line"><span class="w">  Press ENTER to roll again...</span></span>
+    <span class="line"><span class="w">  Dice = </span><span class="y">6</span></span>
+    <span class="line"><span class="w">  Needs exact roll to finish. Stays at 94.</span></span>
+    <span class="line"><span class="p">  Player 1 rolled a 6 — EXTRA TURN!</span></span>
+    <span class="line"><span class="w">  Press ENTER to roll again...</span></span>
+    <span class="line"><span class="w">  Dice = </span><span class="g">6</span></span>
+    <span class="line"><span class="w">  Needs exact roll to finish. Stays at 94.</span></span>
+    <span class="line"></span>
+
+    <span class="line"><span class="sep">---------------------------------</span></span>
+    <span class="line"><span class="b">Player 1's turn</span><span class="dim">  (at square 94)</span></span>
+    <span class="line"><span class="w">Press ENTER to roll...</span></span>
+    <span class="line"><span class="w">Dice = </span><span class="g">6</span></span>
+    <span class="line"><span class="w">  Player 1 moved to square 100.</span></span>
+    <span class="line"></span>
+    <span class="line"><span class="y">  =========================</span></span>
+    <span class="line"><span class="y">  Player 1 WINS!</span></span>
+    <span class="line"><span class="y">  =========================</span></span>
+    <span class="line"></span>
+    <span class="line"><span class="dim">  Thanks for playing!</span></span>
+    <span class="line"></span>
+    <span class="line"><span class="prompt">$ </span><span class="dim">_</span></span>
+  </div>
+</div>
